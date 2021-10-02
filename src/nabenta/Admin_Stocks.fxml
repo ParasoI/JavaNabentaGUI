@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nabenta.Controller_AdmStocks">
+   <children>
+      <Pane prefHeight="700.0" prefWidth="250.0" style="-fx-background-color: #0777F8;">
+         <children>
+            <Button layoutY="174.0" mnemonicParsing="false" onAction="#switchToStocks" prefHeight="59.0" prefWidth="250.0" styleClass="btnTabs" text="Stocks" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font></Button>
+            <Button layoutY="234.0" mnemonicParsing="false" onAction="#switchToSales" prefHeight="59.0" prefWidth="250.0" styleClass="btnTabs" text="Sales" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Button>
+            <Button layoutY="293.0" mnemonicParsing="false" onAction="#switchToReceipts" prefHeight="59.0" prefWidth="250.0" text="Receipts" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="btnTabs" />
+                  <String fx:value="btnAbout" />
+               </styleClass></Button>
+            <Button layoutY="582.5" mnemonicParsing="false" onAction="#switchToParentRoot" prefHeight="59.0" prefWidth="250.0" styleClass="btnOrange" text="Sign out">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font></Button>
+            <Label fx:id="lbl_cashierName" alignment="CENTER" contentDisplay="CENTER" layoutY="534.0" prefHeight="20.0" prefWidth="250.0" text="Luffy D. Monkey" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font></Label>
+            <ImageView fitHeight="162.0" fitWidth="164.0" layoutX="44.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/logo/logo_circle.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="26.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/obj/tab_pointer.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="554.0" prefHeight="20.0" prefWidth="250.0" text="Admin" textFill="WHITE" />
+            <ImageView fx:id="imv_cashierPic" fitHeight="150.0" fitWidth="150.0" layoutX="50.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true" styleClass="empPic">
+               <image>
+                  <Image url="@assets/mock/employee_pic.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="250.0" prefHeight="59.0" prefWidth="750.0" style="-fx-background-color: #F88807;">
+         <children>
+            <Button layoutX="689.0" layoutY="-1.0" mnemonicParsing="false" onAction="#exit" prefHeight="61.0" prefWidth="61.0" styleClass="btnExit" text="0" />
+         </children></Pane>
+      <Pane layoutX="250.0" layoutY="59.0" prefHeight="526.0" prefWidth="420.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="71.0" layoutY="39.0" />
+            <Button layoutX="41.0" layoutY="438.0" mnemonicParsing="false" onAction="#deleteGrocery" prefHeight="59.0" prefWidth="150.0" styleClass="btnOrange" stylesheets="@style.css" text="Delete">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="209.0" layoutY="438.0" mnemonicParsing="false" onAction="#saveGrocery" prefHeight="59.0" prefWidth="150.0" styleClass="btnGreen" text="Save">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="42.0" layoutY="26.0" text="Information">
+               <font>
+                  <Font name="Verdana Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="71.0" text="Barcode:">
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfGroBarcode" layoutX="42.0" layoutY="94.0" prefHeight="28.0" prefWidth="316.0" promptText="Ex. 123456789012">
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="42.0" layoutY="134.0" text="Name:">
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfGroName" layoutX="42.0" layoutY="157.0" prefHeight="28.0" prefWidth="316.0" promptText="Ex. Apple">
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="42.0" layoutY="197.0" text="Price: (₱)">
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfGroPrice" layoutX="42.0" layoutY="220.0" prefHeight="28.0" prefWidth="316.0" promptText="Ex. 49">
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <Label layoutX="42.0" layoutY="260.0" text="Category:">
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfGroCateg" layoutX="42.0" layoutY="283.0" prefHeight="28.0" prefWidth="316.0" promptText="Ex. Fruits">
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <Label layoutX="42.0" layoutY="323.0" text="Description">
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfGroDesc" layoutX="42.0" layoutY="346.0" prefHeight="28.0" prefWidth="316.0" promptText="Ex. An apple is an edible fruit produced by an apple tree.">
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <Button layoutX="267.0" layoutY="389.0" mnemonicParsing="false" onAction="#clearFieldTable" prefHeight="26.0" prefWidth="90.0" text="Clear">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="670.0" layoutY="59.0" prefHeight="526.0" prefWidth="331.0" style="-fx-background-color: white;">
+         <children>
+            <TableView fx:id="tbvGroceries" layoutY="59.0" prefHeight="437.0" prefWidth="290.0">
+              <columns>
+                <TableColumn fx:id="tbcName" prefWidth="127.0" text="Name" />
+                <TableColumn fx:id="tbcBarcode" prefWidth="113.0" text="Barcode" />
+                  <TableColumn fx:id="tbcStocks" prefWidth="49.0" text="Stocks" />
+              </columns>
+            </TableView>
+            <Label layoutY="26.0" text="Groceries">
+               <font>
+                  <Font name="Verdana Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="250.0" layoutY="585.0" prefHeight="116.0" prefWidth="750.0" style="-fx-background-color: #3992F9;">
+         <children>
+            <Label layoutX="94.0" layoutY="31.0" text="Barcode:" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfSupBarcode" editable="false" layoutX="50.0" layoutY="58.0" prefHeight="28.0" prefWidth="150.0" promptText="Ex. 123456789012">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <Label layoutX="230.0" layoutY="31.0" text="Supplier Name:" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfSupName" layoutX="216.0" layoutY="59.0" prefHeight="28.0" prefWidth="150.0" promptText="Ex. Save More">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <Label layoutX="422.0" layoutY="31.0" text="Quantity:" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfSupQuant" layoutX="384.0" layoutY="59.0" prefHeight="28.0" prefWidth="150.0" promptText="Ex. 99">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <Button layoutX="550.0" layoutY="36.0" mnemonicParsing="false" onAction="#addSupply" prefHeight="46.0" prefWidth="150.0" styleClass="btnGreen" text="Add Stock">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Button>
+         </children></Pane>
+   </children>
+</AnchorPane>

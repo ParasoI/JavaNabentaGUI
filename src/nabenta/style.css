@@ -1,0 +1,98 @@
+.txfLogin{
+    -fx-background-color: #222222;
+    -fx-border-color: white;
+    -fx-border-radius: 1;
+    -fx-text-fill: white;
+}
+
+.btnLogin{
+    -fx-background-color: #F88807;
+    -fx-background-radius: 8;
+}
+
+.btnLogin:hover{
+    -fx-background-color: #F9A039;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.btnLogin:pressed{
+    -fx-background-color: #07F80F;
+}
+
+.btnTabs{
+    -fx-background-color: #0F07F8;
+    -fx-text-fill: white;
+    -fx-border-bottom: 3;
+    -fx-border-width: 1 0 2 0;
+    -fx-border-color: #0F07F8 yellow #0F07F8 yellow;
+}
+
+.btnTabs:hover{
+    -fx-background-color: #0777F8;
+    -fx-text-fill: black;
+}
+
+.btnTabs:pressed{
+    -fx-background-color: #0F07F8;
+    -fx-text-fill: white;
+}
+
+.btnAbout{
+    -fx-border-width: 1 0 1 0;
+    -fx-border-color: #0777F8 yellow #0F07F8 yellow;
+}
+
+.empPic:hover{
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+.btnOrange{
+    -fx-background-color: #F88807;
+}
+
+.btnOrange:hover{
+    -fx-background-color: #F9A039;
+}
+
+.btnOrange:pressed{
+    -fx-background-color: #F88807;
+}
+
+.btnGreen{
+    -fx-background-color: #07F80F;
+}
+
+.btnGreen:hover{
+    -fx-background-color: #39F93F;
+}
+
+.btnGreen:pressed{
+    -fx-background-color: #07F80F;
+}
+
+.btnLoginExit{
+    -fx-background-image: url("assets/obj/exitLogin.png");
+    -fx-background-color: transparent;
+}
+
+.btnLoginExit:hover{
+    -fx-background-color: #F807F0;
+}
+.btnLoginExit:pressed{
+    -fx-background-color: #F939F3;
+}
+
+.btnExit{
+    -fx-background-image: url("assets/obj/exit.png");
+    -fx-background-color: transparent;
+}
+
+.btnExit:hover{
+    -fx-background-color: #F807F0;
+}
+.btnExit:pressed{
+    -fx-background-color: #F939F3;
+}
+

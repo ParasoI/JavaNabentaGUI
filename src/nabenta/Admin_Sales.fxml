@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nabenta.Controller_AdmSales">
+   <children>
+      <Pane prefHeight="700.0" prefWidth="250.0" style="-fx-background-color: #0777F8;">
+         <children>
+            <Button layoutY="174.0" mnemonicParsing="false" onAction="#switchToStocks" prefHeight="59.0" prefWidth="250.0" styleClass="btnTabs" text="Stocks" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Button>
+            <Button layoutY="234.0" mnemonicParsing="false" onAction="#switchToSales" prefHeight="59.0" prefWidth="250.0" styleClass="btnTabs" text="Sales" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font></Button>
+            <Button layoutY="293.0" mnemonicParsing="false" onAction="#switchToReceipts" prefHeight="59.0" prefWidth="250.0" text="Receipts" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="btnTabs" />
+                  <String fx:value="btnAbout" />
+               </styleClass></Button>
+            <Button layoutY="582.5" mnemonicParsing="false" onAction="#switchToParentRoot" prefHeight="59.0" prefWidth="250.0" styleClass="btnOrange" text="Sign out">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font></Button>
+            <Label fx:id="lbl_cashierName" alignment="CENTER" contentDisplay="CENTER" layoutY="534.0" prefHeight="20.0" prefWidth="250.0" text="Luffy D. Monkey" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font></Label>
+            <ImageView fitHeight="162.0" fitWidth="164.0" layoutX="44.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/logo/logo_circle.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="26.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/obj/tab_pointer.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="554.0" prefHeight="20.0" prefWidth="250.0" text="Admin" textFill="WHITE" />
+            <ImageView fx:id="imv_cashierPic" fitHeight="150.0" fitWidth="150.0" layoutX="50.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true" styleClass="empPic">
+               <image>
+                  <Image url="@assets/mock/employee_pic.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="250.0" prefHeight="59.0" prefWidth="750.0" style="-fx-background-color: #F88807;">
+         <children>
+            <Button layoutX="689.0" layoutY="-1.0" mnemonicParsing="false" onAction="#exit" prefHeight="61.0" prefWidth="61.0" styleClass="btnExit" text="0" />
+         </children></Pane>
+      <Pane layoutX="250.0" layoutY="59.0" prefHeight="117.0" prefWidth="750.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="335.0" layoutY="11.0" text="Date Today">
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDateToday" alignment="CENTER" layoutY="35.0" prefHeight="47.0" prefWidth="750.0" text="2021-01-01">
+               <font>
+                  <Font name="Arial Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="250.0" layoutY="176.0" prefHeight="525.0" prefWidth="750.0" style="-fx-background-color: #3992F9;">
+         <children>
+            <LineChart fx:id="lchReport" layoutX="42.0" layoutY="99.0" prefHeight="400.0" prefWidth="461.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <ChoiceBox fx:id="cbxTimePeriod" layoutX="325.0" layoutY="55.0" prefWidth="100.0" />
+            <Label layoutX="522.0" layoutY="129.0" prefWidth="180.0" text="Total Customers served:" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="530.0" layoutY="215.0" text="Total Orders received:" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="567.0" layoutY="301.0" text="Total Sales:" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotalCust" alignment="CENTER" contentDisplay="CENTER" layoutX="522.0" layoutY="165.0" prefHeight="30.0" prefWidth="180.0" text="20" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotalOrd" alignment="CENTER" contentDisplay="CENTER" layoutX="522.0" layoutY="251.0" prefWidth="180.0" text="20" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotalSales" alignment="CENTER" contentDisplay="CENTER" layoutX="522.0" layoutY="337.0" prefHeight="30.0" prefWidth="180.0" text="₱20" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="315.0" layoutY="38.0" text="Weekly, Monthly, Yearly" textFill="WHITE" />
+            <Label layoutX="42.0" layoutY="10.0" text="Sales Report" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="571.0" layoutY="387.0" text="Best Seller:" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblBestSel" alignment="CENTER" contentDisplay="CENTER" layoutX="489.0" layoutY="423.0" prefHeight="30.0" prefWidth="262.0" text="Apple" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nabenta.Controller_CshAbout">
+   <children>
+      <Pane prefHeight="700.0" prefWidth="250.0" style="-fx-background-color: #0777F8;">
+         <children>
+            <Button fx:id="btnTakeOrder" layoutY="174.0" mnemonicParsing="false" onAction="#switchToTakeOrder" prefHeight="59.0" prefWidth="250.0" styleClass="btnTabs" text="Take Order" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Button>
+            <Button fx:id="btnSales" layoutY="234.0" mnemonicParsing="false" onAction="#switchToSales" prefHeight="59.0" prefWidth="250.0" styleClass="btnTabs" text="Sales" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Button>
+            <Button fx:id="btnAbout" layoutY="293.0" mnemonicParsing="false" onAction="#switchToAbout" prefHeight="59.0" prefWidth="250.0" text="About" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="btnTabs" />
+                  <String fx:value="btnAbout" />
+               </styleClass></Button>
+            <Button fx:id="btnSignout" layoutY="582.5" mnemonicParsing="false" onAction="#switchToParentRoot" prefHeight="59.0" prefWidth="250.0" styleClass="btnOrange" text="Sign out">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font></Button>
+            <Label fx:id="lbl_cashierName" alignment="CENTER" contentDisplay="CENTER" layoutY="534.0" prefHeight="20.0" prefWidth="250.0" text="Luffy D. Monkey" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font></Label>
+            <ImageView fitHeight="162.0" fitWidth="164.0" layoutX="44.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/logo/logo_circle.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="26.0" layoutX="1.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/obj/tab_pointer.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="554.0" prefHeight="20.0" prefWidth="250.0" text="Cashier" textFill="WHITE" />
+            <ImageView fx:id="imv_cashierPic" fitHeight="150.0" fitWidth="150.0" layoutX="50.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true" styleClass="empPic">
+               <image>
+                  <Image url="@assets/mock/employee_pic.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="250.0" prefHeight="59.0" prefWidth="750.0" style="-fx-background-color: #F88807;">
+         <children>
+            <Button layoutX="689.0" layoutY="-1.0" mnemonicParsing="false" onAction="#exit" prefHeight="61.0" prefWidth="61.0" styleClass="btnExit" text="0" />
+         </children></Pane>
+      <Pane layoutX="250.0" layoutY="59.0" prefHeight="641.0" prefWidth="750.0" style="-fx-background-color: #eeeeee;">
+         <children>
+            <Pane layoutX="84.0" layoutY="59.0" prefHeight="207.0" prefWidth="588.0" style="-fx-background-color: #0777F8;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="210.0" layoutY="29.0" text="Short Description" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="86.0" layoutY="61.0" prefHeight="113.0" prefWidth="416.0" text="NABENTA is a Point-of-Sale desktop application dedicated for a grocery mart business. The name 'nabenta' came from the tagalog word which means &quot;sold&quot;. It is currently for educational purposes only." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="84.0" layoutY="295.0" prefHeight="295.0" prefWidth="588.0" style="-fx-background-color: #07F0F8;">
+               <children>
+                  <Label layoutX="207.0" layoutY="29.0" text="ABOUT NABENTA">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="84.0" layoutY="78.0" text="Product Version: ">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="84.0" layoutY="101.0" text="Nabenta 0.3.3">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="84.0" layoutY="140.0" text="Build Version: ">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="84.0" layoutY="163.0" text="Version 0.3.3">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="84.0" layoutY="186.0" text="Date: 2021-07-27 21:52:14">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="84.0" layoutY="209.0" text="Nabenta Version: 0">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="84.0" layoutY="232.0" text="Languages: Java, MySQL">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="420.0" layoutY="78.0" text="Planned by:" textAlignment="RIGHT">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="375.0" layoutY="101.0" text="Ralp Kendall Abad" textAlignment="RIGHT">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="410.0" layoutY="127.0" text="Designed by:" textAlignment="RIGHT">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="374.0" layoutY="150.0" text="Ralp Kendall Abad" textAlignment="RIGHT">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="400.0" layoutY="176.0" text="Developed by:" textAlignment="RIGHT">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="374.0" layoutY="199.0" text="Ralp Kendall Abad" textAlignment="RIGHT">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="314.0" layoutY="232.0" text="©2021, Ralp Kendall Abad" textAlignment="RIGHT">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

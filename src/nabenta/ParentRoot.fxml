@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nabenta.Controller_ParentRoot">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/bg/ParentRoot_bg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="400.0" fitWidth="500.0" layoutX="250.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/bg/login_bg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="157.0" fitWidth="166.0" layoutX="426.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/logo/logo_transparent_bnw.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="433.0" layoutY="259.0" text="Welcome to the shop!" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Verdana Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="377.0" layoutY="283.0" text="Log into your account" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Verdana Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="334.0" layoutY="364.0" text="Email or username:" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Verdana Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txfUsername" layoutX="334.0" layoutY="397.0" onAction="#login" prefHeight="25.0" prefWidth="333.0" promptText="Ex. juandelacruz069" styleClass="txfLogin" />
+      <Label alignment="CENTER" layoutX="334.0" layoutY="441.0" text="Password:" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Verdana Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button id="btnLogin" focusTraversable="false" layoutX="334.0" layoutY="541.0" mnemonicParsing="false" onAction="#login" prefHeight="50.0" prefWidth="333.0" styleClass="btnLogin" stylesheets="@style.css" text="Log in" textFill="#222222">
+         <font>
+            <Font name="Verdana Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <PasswordField fx:id="txfUserpass" layoutX="334.0" layoutY="474.0" onAction="#login" prefHeight="25.0" prefWidth="333.0" promptText="Ex. juandelapogi!" styleClass="txfLogin" />
+      <Button fx:id="exit" layoutX="960.0" mnemonicParsing="false" onAction="#exit" prefHeight="40.0" prefWidth="40.0" styleClass="btnLoginExit" />
+   </children>
+</AnchorPane>
